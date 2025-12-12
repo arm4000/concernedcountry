@@ -1,0 +1,22 @@
+.container {
+  height: 250px;
+  position: relative;
+}
+.ctaLink {
+  text-decoration: none;
+  color: #212529;
+  transition: all 500ms;
+  position: absolute;
+  bottom: 40;
+  right: 0;
+  left: 0;
+  padding-top: 20px;
+}
+.ctaLink:hover {
+  color: #ff8f8f;
+  font-size: 40px;
+  font-size-adjust: 20px;
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}

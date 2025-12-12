@@ -1,0 +1,31 @@
+.c_gallery {
+  width: 860px;
+  margin: 0 auto;
+
+  &__wrapper {
+    margin-top: space-mult(5);
+    margin-bottom: space-mult(5);
+    position: relative;
+
+    &__thumb {
+      :global(.swiper-slide) {
+        opacity: 0.4;
+      }
+  
+      :global(.swiper-slide-thumb-active) {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__slide {
+    width: 100% !important;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+  }
+
+  &__thumb {
+    cursor: pointer;
+  }
+}
