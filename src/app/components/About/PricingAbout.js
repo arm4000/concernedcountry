@@ -14,9 +14,13 @@ const PricingAbout = () => {
             <h1 style={{ color: "#FF8F8F" }}> Senior Living Floor Plans </h1>{" "}
             {/* <h3> Our Assisted Living Floor Plans </h3> */}
             <p style={{ fontSize: 18, lineHeight: 1.8 }}>
-              Our studio and one bedroom suites come with their own closets,
-              private bathroom, generous window views and many other amenities.
-              Room measurements are approximate.
+              Our home sits on 5 acres in a serene country setting, where your
+              loved one will enjoy the natural beauty that surrounds them. While
+              having the security of a dedicated and knowledgeable team of
+              caregivers. 
+              Our studio and one bedroom suites come with their own
+              closets, private bathroom, generous window views and many other
+              amenities. Room measurements are approximate.
             </p>
             <p style={{ fontSize: 18, lineHeight: 1.8, color: "#dc7575ff" }}>
               * Residents are urges to bring their own personal furnishing,

@@ -10,11 +10,10 @@ const ServiceAbout = () => {
       <Row>
         <Col lg={8} sm={12}>
           <p style={{ fontSize: 18, lineHeight: 1.8 }}>
-            At Concerned Country Care Assisted Living, attention to your personal
-            needs is delivered by our loving staff with dignity and a genuine
-            spirit of caring. We offer the highest level of service, value, and
-            quality - everything you are looking for in an assisted living
-            community.
+            Our residents enjoy the comforts of a clean and
+            spacious home, quality care and delicious, home-cooked meals. We
+            value providing excellent caregiving with an extra dose of love and
+            attention, 24 hours a day, 7 days a week.
           </p>
         </Col>
       </Row>
