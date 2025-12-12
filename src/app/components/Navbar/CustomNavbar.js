@@ -28,7 +28,7 @@ const CustomNavbar = () => {
       <Container>
         <Navbar.Brand as={Link} href="/">
           <Image
-            src="/images/logo.webp"
+            src="/images/logo.png"
             // height={deviceWidth > 500 ? 150 : 100}
             // width={deviceWidth > 800 ? 300 : 120}
             height={150}
