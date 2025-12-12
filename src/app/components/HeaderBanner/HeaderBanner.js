@@ -41,7 +41,6 @@ const HeaderBanner = () => {
         disableOnInteraction: false,
       }}
       mousewheel={true}
-      style={{position: 'relative'}}
     >
       <SwiperSlide className={styles.swiper_slide}>
         <img

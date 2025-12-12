@@ -31,7 +31,7 @@ const Footer = () => {
       <Row>
         <Col lg={4} sm={12}>
           <Image
-            src="/images/logo.webp"
+            src="/images/logo.png"
             // height={deviceHeight > 500 ? 200 : 200}
             // width={deviceWidth > 500 ? 400 : 300}
             height={160}
