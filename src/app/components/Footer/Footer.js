@@ -1,70 +1,174 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { LuMapPin, LuPhone, LuFacebook } from "react-icons/lu";
-import { LiaFaxSolid } from "react-icons/lia";
+import { MdOutlineFax } from "react-icons/md";
+import styles from "../../page.module.css";
 
 const Footer = () => {
+  const [deviceHeight, setDeviceHeight] = useState();
+  const [deviceWidth, setDeviceWidth] = useState();
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      console.log(
+        "device height: " + window.innerHeight,
+        "device width: " + window.innerWidth
+      );
+      setDeviceHeight(window.innerHeight);
+      setDeviceWidth(window.innerWidth);
+    });
+  }, []);
+
   return (
     <Container
       fluid
       className="pt-5 px-5 pb-2"
-      style={{ backgroundColor: "#0E86AC" }}
+      style={{ backgroundColor: "#F8F9FA" }}
     >
       <Row>
         <Col lg={4} sm={12}>
           <Image
             src="/images/logo.webp"
-            height={180}
-            width={300}
+            // height={deviceHeight > 500 ? 200 : 200}
+            // width={deviceWidth > 500 ? 400 : 300}
+            height={160}
+            width={280}
             style={{ objectFit: "contain" }}
             alt="Grand Blanc Fields Logo"
           />
+          <p className="py-2" style={{ paddingRight: 20 }}>
+            Enhancing lives through compassionate care and a true sense of home.
+          </p>
         </Col>
 
-        <Col lg={5} sm={12} className="pt-4 text-light">
+        <Col lg={2} sm={12} className="pt-2">
+          <h5>Links</h5>
+          <div
+            style={{
+              height: 2,
+              width: 20,
+              backgroundColor: "black",
+              marginBottom: 10,
+            }}
+          />
+          <h6>
+            <Link href={"/services"} className={styles.footerLink}>
+              Services
+            </Link>
+          </h6>
+          <h6>
+            <Link href={"/pricing"} className={styles.footerLink}>
+              Amenities
+            </Link>
+          </h6>
+          <h6>
+            <Link href={"/gallery"} className={styles.footerLink}>
+              Gallery
+            </Link>
+          </h6>
+          <h6>
+            <Link href={"/career"} className={styles.footerLink}>
+              Careers
+            </Link>
+          </h6>
+          <h6>
+            <Link href={"/contact"} className={styles.footerLink}>
+              Contact
+            </Link>
+          </h6>
+        </Col>
+
+        <Col lg={4} sm={12} className="pt-2">
+          <h5>Contact</h5>
+          <div
+            style={{
+              height: 2,
+              width: 20,
+              backgroundColor: "black",
+              marginBottom: 10,
+            }}
+          />
           <div className="d-flex">
-            <LuMapPin color="#F2F2F2" size={30} />
-            <p className="mx-3" style={{ fontSize: 20 }}>
-              11122 W. Wilson Road Montrose, MI 48457
-            </p>
-          </div>
-          <div className="d-flex">
-            <LuPhone color="#F2F2F2" size={30} />
-            <Link href={"tel:(810) 639-2227"} style={{textDecoration: 'none'}}>
-            <p className="mx-3" style={{ fontSize: 20, color: 'white' }}>
-              (810) 639-2227
-            </p>
+            <LuMapPin style={{ color: "GrayText" }} size={20} />
+            <Link
+              href={
+                "http://maps.google.com/?q=11122 W. Wilson Road Montrose, MI 48457"
+              }
+              style={{ textDecoration: "none" }}
+              target="_blank"
+            >
+              <h6
+                className={`${styles.footerLink} mx-3`}
+                style={{ fontSize: 16 }}
+              >
+                11122 W. Wilson Road Montrose, MI 48457
+              </h6>
             </Link>
           </div>
           <div className="d-flex">
-            <LiaFaxSolid color="#F2F2F2" size={30} />
-            <Link href={"tel:(810) 639-6981"} style={{textDecoration: 'none'}}>
-            <p className="mx-3" style={{ fontSize: 20, color: 'white' }}>
-              (810) 639-6981
-            </p>
+            <LuPhone style={{ color: "GrayText" }} size={20} />
+            <Link
+              href={"tel:(810) 639-2227"}
+              style={{ textDecoration: "none" }}
+            >
+              <h6
+                className={`${styles.footerLink} mx-3`}
+                style={{ fontSize: 16 }}
+              >
+                (810) 639-2227
+              </h6>
+            </Link>
+            <p className={`${styles.footerLink}`} style={{ fontSize: 16 }}> / </p>
+            <Link
+              href={"tel:(810) 730-0692"}
+              style={{ textDecoration: "none" }}
+            >
+              <h6
+                className={`${styles.footerLink} mx-3`}
+                style={{ fontSize: 16 }}
+              >
+                (810) 730-0692
+              </h6>
+            </Link>
+          </div>
+          <div className="d-flex">
+            <MdOutlineFax style={{ color: "GrayText" }} size={20} />
+            <Link
+              href={"fax:(810) 639-6981"}
+              style={{ textDecoration: "none" }}
+            >
+              <h6
+                className={`${styles.footerLink} mx-3`}
+                style={{ fontSize: 16 }}
+              >
+                (810) 639-6981
+              </h6>
             </Link>
           </div>
           <Link
             href={"https://www.facebook.com/ConcernedCountyCare"}
             target="_blank"
             style={{
-              // height: 50,
-              // width: 50,
-              // borderRadius: 50,
-              // display: "flex",
-              // justifyContent: "center",
-              // alignItems: "center",
-              // backgroundColor: "#000",
+              height: 40,
+              width: 40,
+              borderRadius: 50,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 10,
+              backgroundColor: "#253551",
             }}
           >
-            <LuFacebook size={30} color="white" />
+            <LuFacebook size={20} color="white" />
           </Link>
         </Col>
       </Row>
 
       <h6 className="text-center text-dark pt-4 pb-2">
-        © Concerned Countary Care - Adult Foster Care
+        © Concerned Country Care - Adult Foster Care
       </h6>
     </Container>
   );

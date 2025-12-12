@@ -1,16 +1,21 @@
+.open_sans {
+  font-family: var(--font-open-sans);
+}
+.arizonia {
+  font-family: var(--font-arizonia);
+}
 .poppins {
   font-family: var(--font-poppins);
 }
 .greatVibes {
   font-family: var(--font-great-vibes);
 }
-
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -21,7 +26,11 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-poppins);
+
+  --rose-pink: #FF8F8F;
+  --lemon-yellow: #FFF1CB;
+  --sky-blue: #C2E2FA; 
+  --light-move: #B7A3E3;
 }
 
 body {
